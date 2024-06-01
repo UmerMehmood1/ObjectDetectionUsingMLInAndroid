@@ -42,6 +42,3 @@ Contributions are welcome! If you find any issues or have suggestions for improv
 License
 This project is licensed under the MIT License - see the LICENSE file for details.
 
-
-Feel free to replace placeholders like `https://github.com/UmerMehmood1/ObjectDetectionUsingMLInAndroid.git` with the actual repository URL and update any other details specific to your project.
-
