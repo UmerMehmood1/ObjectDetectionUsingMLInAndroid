@@ -1,59 +1,44 @@
-# TensorFlow Lite Image Classification Demo
+# Object Detection Android Application
 
-### Overview
+This Android application is designed to detect objects using a TensorFlow Lite model. It utilizes the TensorFlow Lite framework to perform real-time object detection on images captured by the device's camera.
 
-This is a camera app that continuously classifies the objects in the frames
-seen by your device's back camera, with the option to use a quantized
-[MobileNet V1](https://tfhub.dev/tensorflow/lite-model/mobilenet_v1_1.0_224_quantized/1/metadata/1),
-[EfficientNet Lite0](https://tfhub.dev/tensorflow/lite-model/efficientnet/lite0/int8/2),
-[EfficientNet Lite1](https://tfhub.dev/tensorflow/lite-model/efficientnet/lite1/int8/2),
-or
-[EfficientNet Lite2](https://tfhub.dev/tensorflow/lite-model/efficientnet/lite2/int8/2)
-model trained on Imagenet (ILSVRC-2012-CLS). These instructions
-walk you through building and running the demo on an Android device.
+## Features
 
-The model files are downloaded via Gradle scripts when you build and run the
-app. You don't need to do any steps to download TFLite models into the project
-explicitly.
+- Real-time object detection using a TensorFlow Lite model.
+- Simple and intuitive user interface.
+- Ability to capture images and detect objects within them.
+- Efficient use of device resources for fast processing.
 
-This application should be run on a physical Android device.
+## Installation
 
-![App example showing UI controls. Result is espresso.](screenshot1.jpg?raw=true "Screenshot with controls")
+1. Clone this repository to your local machine:
 
-![App example without UI controls. Result is espresso.](screenshot2.jpg?raw=true "Screenshot without controls")
+   ```bash
+   git clone https://github.com/your/repository.git
+2. Open the project in Android Studio.
 
-This sample demonstrates how to use TensorFlow Lite with Kotlin. If
-you would like to see an example using Java, please go to the
-[android_java sample directory](../android_java).
+3. Build and run the application on your Android device or emulator.
 
+Usage
+1. Launch the application on your Android device.
 
-## Build the demo using Android Studio
+2. Grant necessary permissions for the application to access the device camera.
 
-### Prerequisites
+3. Point the camera towards objects you want to detect.
 
-* The **[Android Studio](https://developer.android.com/studio/index.html)**
-    IDE (Android Studio 2021.2.1 or newer). This sample has been tested on
-    Android Studio Chipmunk
+4. Tap the capture button to capture an image and perform object detection.
 
-* A physical Android device with a minimum OS version of SDK 23 (Android 6.0 -
-    Marshmallow) with developer mode enabled. The process of enabling developer
-    mode may vary by device.
+5. View the detected objects on the screen along with their confidence scores.
 
-### Building
+Model
+The object detection model used in this application is a TensorFlow Lite model trained on a specific dataset. The model file (.tflite) can be found in the assets directory of the project.
 
-* Open Android Studio. From the Welcome screen, select Open an existing
-    Android Studio project.
+Dependencies
+TensorFlow Lite: tensorflow/tensorflow
+Android Support Library: google/android-support-library
+Contributing
+Contributions are welcome! If you find any issues or have suggestions for improvements, please feel free to open an issue or create a pull request.
 
-* From the Open File or Project window that appears, navigate to and select
-    the tensorflow-lite/examples/image_classification/android directory.
-    Click OK.
+License
+This project is licensed under the MIT License - see the LICENSE file for details.
 
-* If it asks you to do a Gradle Sync, click OK.
-
-* With your Android device connected to your computer and developer mode
-    enabled, click on the green Run arrow in Android Studio.
-
-### Models used
-
-Downloading, extraction, and placing the models into the assets folder is
-managed automatically by the download.gradle file.
